@@ -1,0 +1,23 @@
+# data / raw dumps
+data/
+**/*.csv
+
+# embeddings / arrays
+**/*.npy
+**/*.npz
+
+# topic model artifacts / outputs
+baselines/BERTopic/**/bertopic_model
+baselines/BERTopic/**/*.html
+baselines/BERTopic/**/*.csv
+
+**/*.jsonl
+**/*.parquet
+**/*.feather
+**/*.pkl
+**/*.pickle
+**/*.joblib
+
+# OS / editor
+.DS_Store
+.vscode/
