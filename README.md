@@ -12,14 +12,47 @@ We provide the evaluation code under "evaluation", where we include the code to 
 
 Each section is broken down as follows:
 
-## Pipeline Code:
+## Pipeline Code: Details the whole process from initial dataset -> assigned themes 
 
-### Preprocessing:
-### Clustering Code:
-### Coherency Checking:
-### Summary Generation:
-### Cluster Merging:
-### Theme Generation:
+### Preprocessing: Removes duplicates/similar texts using SentenceBERT
+  - preprocessing.py: script to deduplicate target csv
+  - bluesky_preprocessing: contains deduplicated bluesky data + embeddings
+  - meta_preprocessing: contains deduplicated meta data + embeddings
+
+### Clustering Code: Clusters texts using HDBSCSN
+  - get_clusters.py: clustering code
+  - bluesky_clusters (meta_clusters): contains 3 files with clustering info for Bluesky (Meta)
+    - cluster_summary.csv: contains list of clusters and number of posts (ads) in that cluster
+    - posts_with_clusters.csv (ads_with_clusters.csv): list of posts (ads) with their assigned clusters
+    - topk_posts_by_cluster.csv: contains top k posts (ads) by probability for each cluster 
+
+### Coherency Checking: Checks coherency of each cluster using LLM (Mistral Large) 
+  - Uses the top k posts/ads as examples for each cluster to determine coherency
+  - coherency_check.py: code to obtain coherency results
+  - coherency_prompting.txt: few-shot examples for LLM
+  - bluesky_coherency (meta_coherency): contains conherency_results.csv from running coherency_check.py
+    - List of clusters + whether each cluster is coherent or incoherent
+      
+### Summary Generation: Obtain summaries from each coherent cluster using an LLM (Mistral Large)
+  - Prompts LLM to provide a summary for the top k posts/ads in the given cluster.
+  - This process is completed for each cluster to obtain a full list of cluster summaries.
+  - get_cluster_summaries.py: generate cluster summaries for Meta or Bluesky
+  - bluesky_summaries (meta_summaries): contains cluster_summaries.csv with the list of clusters and their summaries
+    
+### Cluster Merging: Merges similar clusters with best Silhouette Score / DBI balance
+  - merge.py: Given the values specified in GRID_SPEC, determines the best merge threshold 
+              for SentenceBERT and uses this value to merge similar clusters
+  - bluesky_merging (meta_merging): includes 4 files detailing:
+    - Removed clusters: merged__removed_clusters.csv
+    - The merging key: merged__best_cluster_to_merged.csv
+    - The list of merged summaries: merged__merged_summaries.jsonl
+    - List of threshold values with silhouette, dbi, number of resulting clusters, number of clusters with 1 summary
+      - merged__summary_eval_threhold_sweep.csv
+     
+### Theme Generation: Generate themes for each merged cluster using an LLM (Mistral Large)
+  - Given the merged cluster summary list, obtain a 1-3 word theme for each summary
+  - get_themes.py: codes to obtain the list of themes based on merged summaries for Meta or Bluesky
+  - bluesky_themes (meta_themes): contains cluster_themes.csv with the list of clusters, themes, and summaries
 
 ## Evaluation Code:
 ### Human Annotation:
@@ -52,6 +85,7 @@ to assess whether the inferred themes meaningfully capture underlying climate-re
 ### Common Theme Analysis:
 
 ##### Folder Contents:
+
 
 
 
