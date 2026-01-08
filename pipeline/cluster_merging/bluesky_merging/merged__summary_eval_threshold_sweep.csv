@@ -1,0 +1,2 @@
+threshold,silhouette,dbi,n_clusters_summ,n_singletons_summ,sil_norm,dbi_norm,score
+0.800000,0.484379,0.444044,46,43,1.000000,0.000000,1.000000

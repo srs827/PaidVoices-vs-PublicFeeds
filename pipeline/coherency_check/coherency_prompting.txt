@@ -1,0 +1,201 @@
+﻿Label each of the 5 paragraphs below. If the labels are all the same, the cluster is *coherent*. If the labels differ, then the cluster is *incoherent*. Please state whether the cluster is coherent or incoherent, and explain your reasoning. 
+
+** Copper has become the world’s third most consumed metal, but uncertain demand levels and supply constraints have created a volatile outlook. **
+
+
+Label: Against copper mining
+
+
+** A recent survey by the Tucson Metro Chamber reveals that 72 percent of Arizonans support copper mining in the Copper State, highlighting widespread recognition of copper’s vital role in modern life. As a key component in renewable energy technologies, electric vehicles, and everyday electronics, copper is integral to the transition toward a more sustainable future. Accounting for 74 percent of the nations' copper, Arizona holds a strategic position in ensuring domestic copper production, which is crucial for reducing dependence on foreign imports. This not only bolsters economic security but also strengthens the nation’s supply chain resilience, particularly in industries that are critical to U.S. infrastructure and national security. @[100063470513933:2048:Resolution Copper], one of the most significant undeveloped copper projects in the country, has the potential to be a major contributor to meeting rising U.S. copper demand. Once operational, it could supply an astounding 25 percent of the country’s copper needs, making a substantial impact on domestic production. By tapping into Arizona’s rich copper reserves, Resolution Copper will help the U.S. achieve greater self-sufficiency in this essential metal, supporting the growth of emerging technologies and furthering national goals in clean energy, transportation, and defense innovation. To learn more about Resolution Copper, please visit the link below: https://resolutioncopper.com/project-overview/ **
+
+Label: Supports copper mining
+
+** "Operating for over 120 years, the Kennecott Mine is the second-largest copper producer in the United States and supplies domestically sourced copper, gold, silver, molybdenum, and tellurium both nationally and internationally. The mine is located in the Oquirrh Mountains near Salt Lake City, Utah, and is operated by Rio Tinto. Mining activities began in 1903, making it one of the oldest continuously operating mines in the U.S. and the world's deepest open-pit mine. To date, Kennecott has produced over 19 million tons of copper, along with substantial amounts of other valuable metals. At its peak, the mine employed thousands and continues to provide around 2,400 jobs, bolstering the local economy through direct employment and support of associated industries. The 19 million tons of copper produced is enough to supplement over 4 million 3 MW wind turbines. To put it in perspective, it’s estimated that the U.S. currently has 90,000 wind turbines operating today. Copper from Kennecott is vital to daily life, playing an essential role in electrical wiring, plumbing, and infrastructure. Its superior conductivity makes it indispensable in electronic devices like smartphones, computers, and home appliances. Beyond that, copper is crucial to the renewable energy sector, as it is used extensively in wind turbines, solar panels, and electric vehicles, making it integral to the shift towards a more sustainable energy future. To learn more about Kennecott, please visit Rio Tinto’s Website via the link below: https://lnkd.in/eF4vKZSh **
+
+Label: Supports copper mining
+
+
+** The Estelle Gold Project in Alaska positions it as North America's next major gold and critical minerals district with the ability to leverage both the emerging gold and antimony bull markets. Along with a global 9.9-million-ounce gold resource, Nova has also discovered significant deposits of stibnite (antimony) at multiple locations across its claims. **
+
+Label: promotes gold mining
+
+** Mining in Minnesota is more than tradition—it’s a cutting-edge STEM career that shapes the future. While the work often happens behind the scenes, the results are all around us in the products we use every day. Take a closer look at the innovation driving iron mining with insights from Mike Bakk, Director of Operational Readiness at U.S. Steel’s Keetac mine. **
+
+
+Label: Supports iron mining
+
+The cluster is *incoherent* because the labels are not consistent. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Label each of the 5 paragraphs below. If the labels are all the same, the 5 paragraphs are *coherent*. If the labels differ, then the 5 paragraphs are *incoherent*. Please state whether the paragraphs are coherent or incoherent, and explain your reasoning. 
+
+** Over 410,000 residences in Ohio use propane to fuel their daily lives. Propane is a greener fuel compared to electricity, wood, or fuel oil, helping to reduce Ohio’s residential air pollution while ensuring reliable heat during the winter. LEARN MORE: https://bit.ly/4cJ81mO #OPGA #Propane #CleanEnergy **
+
+Label: Supports propane
+
+
+** An OPGA report on standard propane and renewable propane was featured in front of nearly 900 environmentalists, municipal leaders, and corporate leaders. The attendees at the Green Unbrella conference in Cincinnati were very interested and supportive of propane's clean role in heating homes and fueling fleet vehicles. Learn more about the OPGA Environmental Campaign: https://bit.ly/3XQmlTR ** 
+
+Label: Supports propane
+
+
+** Find the perfect propane solution for your home with help from the experts at the Minnesota Propane Association. "Clean and renewable energy like propane accelerates decarbonization in Ohio. LEARN MORE: https://bit.ly/3GQispR #OPGA #Propane #CleanFuel **
+
+Label: Supports propane
+
+
+** Clean and renewable energy like propane accelerates decarbonization in Ohio. LEARN MORE: https://bit.ly/3GQispR #OPGA #Propane #CleanFuel **
+
+Label: Supports propane
+
+
+** Propane: A Solution to Reach Dayton’s Climate Goals; LEARN THE FACTS: https://bit.ly/4echov4 #OPGA #Propane #CleanFuel **
+
+Label: Supports propane
+
+
+The cluster is *coherent* because the labels are consistent. 
+
+
+
+
+Label each of the 5 paragraphs below. If the labels are all the same, the 5 paragraphs are *coherent*. If the labels differ, then the 5 paragraphs are *incoherent*. Please state whether the paragraphs are coherent or incoherent, and explain your reasoning. 
+
+** Nuclear energy doesn’t just power our homes—it’s energizing safer, cleaner and stronger communities for friends and families like yours. Whether you're exploring a nuclear engineering degree, a hands-on trade program or leveling up your career, you can find an opportunity in a growing industry that makes a real difference. **
+
+Label: Supports nuclear energy
+
+
+** Nuclear power is safer, cleaner, and more reliable than wind and solar. If we want to fight climate change, we need an energy change.,New Jersey deserves a climate-neutral future. If we want to protect our planet while meeting our energy needs, we need nuclear.,What is the cleanest, safest, and most reliable energy to combat climate change? That’s right — it’s nuclear.,Nuclear energy is our best option to protect our climate while powering New Jersey. Stand up against climate change- stand for nuclear!,We are in the middle of a climate emergency. If we want to tackle climate change, we need to use more clean energy. We need nuclear. **
+
+Label: Supports nuclear energy
+
+
+** Unlocking Nuclear Power: Could We Really Go Carbon-Free? **
+
+Label: Supports nuclear energy
+
+
+** 🎓 Just graduated? Join an industry that serves a greater purpose! In the nuclear industry, your work drives real clean energy solutions and strengthens your community with reliable power. And because of data centers coming to your state, opportunities in nuclear energy are closer than you think. **
+
+Label: Supports nuclear energy
+
+
+** #DYK nuclear power does more than cut carbon, it protects the land that we love for generations to come. But building a sustainable future takes all kinds of talent. No matter your background, there’s a place for you in the nuclear industry, where every role plays a part in conserving your land and powering your community. This Earth Day find your place in nuclear energy. 🌍 **
+
+Label: Supports nuclear energy
+
+The cluster is *coherent* because the labels are consistent. 
+
+
+Label each of the 5 paragraphs below. If the labels are all the same, the 5 paragraphs are *coherent*. If the labels differ, then the 5 paragraphs are *incoherent*. Please state whether the paragraphs are coherent or incoherent, and explain your reasoning. 
+
+** Here are some key things to know about used motor oil: ﻿﻿200 million gallons of oil are dumped into U.S. waterways, sewers, and landfills by people changing their own motor oil. ﻿﻿Used motor oil is considered hazardous waste in California. Used motor oil is recyclable! Every 1 gallon of used oil recovered can produce 2.5 quarts of re-refined oil. Oil never wears out—it just gets dirty. Most cars can go more than 5,000 miles between oil changes. ** 
+
+Label: Supports Motor Oil
+
+** Check out more interesting facts about used motor oil and ways to prevent oil pollution at https://bit.ly/3wFZue1. The oil and gas industry in Eddy County is the economic driver for our state. I fully support the oil and gas industry and am proud of the environmental standards these great companies impose on themselves. ** 
+
+Label: Supports Motor Oil
+
+
+**  The EPA will hold three virtual listening sessions to take public input on the Agency's upcoming regulations for the Oil and Natural Gas Industry. What you cannot see at an oil & gas well can hurt you. Local Front Range residents are visiting oil and gas sites to learn how invisible methane gas and other health-harming pollution are threatening their communities. ** 
+
+Label: Against Oil & Gas Industry
+
+
+** Biodiesel (also known as biofuel) is a gallon-for-gallon substitute for petroleum-based fuels, which have a higher carbon intensity. By 2030, it's estimated that biodiesel will displace 529 million gallons of heating oil! **
+
+Label: Supports Biofuel
+
+
+** ﻿﻿﻿Biodiesel is nontoxic, biodegradable renewable liquid fuel. The biofuel that's blended with heating oil to create Bioheat fuel is generally produced by agricultural byproducts, including used cooling oil, animal fats, inedible corn oil, soybean oil and canola oil. This puts excess oil and fats to good use! **
+
+Label: Supports Biofuel
+
+
+The cluster is *incoherent* because the labels are not consistent. 
+
+
+
+Label each of the 5 paragraphs below. If the labels are all the same, the 5 paragraphs are *coherent*. If the labels differ, then the 5 paragraphs are *incoherent*. Please state whether the paragraphs are coherent or incoherent, and explain your reasoning. 
+
+** At Close Parish Coal, we believe our community is worth every effort—and every measure of protection—from deadly pollution and disaster. The first step to a safer, healthier future? Retire the outdated coal units at WA Parish and make way for clean energy. **
+
+Label: Against Coal Pollution
+
+
+** The producer of Iowa’s Dirty Secret: The True Cost of Burning Coal joined Talk of Iowa to discuss the documentary and how MidAmerican is misleading Iowans about their coal plants. **
+
+Label: Against Coal Pollution
+
+
+** Listen to Sunshine Thomas-Bear highlight the consequences of coal pollution on a recent episode of Talk of Iowa. **
+
+Label: Against Coal Pollution
+
+
+** Coal mines are leaking pollution into WV water, and taxpayers are paying the price. Urge regulators to act. ** 
+
+Label: Against Coal Pollution
+
+
+** Every year, coal plants release tons of dangerous, life-threatening pollution into our air.  Demand Georgia Power retire dirty coal today. **
+
+Label: Against Coal Pollution
+
+The cluster is *coherent* because the labels are consistent. 
+
+
+
+
+
+
+
+
+
+Label each of the 5 paragraphs below. If the labels are all the same, the 5 paragraphs are *coherent*. If the labels differ, then the 5 paragraphs are *incoherent*. Please state whether the paragraphs are coherent or incoherent, and explain your reasoning. 
+
+** Discover What Matters,Stay on Top of the World!,Explore - Discover - Understand - Change **
+
+Label: Supports Discovery
+
+
+** From Language Diversity to International Borders: The extraordinary maps redefining how we see the world. ** 
+
+Label: Supports Diversity & Exploration
+
+
+** How do you measure ambition? At Panasonic, we're taking responsibility for our impact now and long into the future 🙌 **
+
+Label: Supports Social Responsibility
+
+
+** What’s Next?’ is a show about the future, the challenges we face, and the big thinkers and innovators who are pushing for progress. **
+
+Label: Supports Innovation
+
+
+** The world is facing some tough challenges, but learning from the experts on “What’s Next?” made me even more optimistic that we can solve them. **
+
+Label: Supports Progress Towards World Challenges
+
+The cluster is *incoherent* because the labels are not consistent. 
+
+
