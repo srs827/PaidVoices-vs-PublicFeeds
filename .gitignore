@@ -1,23 +1,76 @@
-# data / raw dumps
-data/
-**/*.csv
-
-# embeddings / arrays
-**/*.npy
-**/*.npz
-
-# topic model artifacts / outputs
-baselines/BERTopic/**/bertopic_model
-baselines/BERTopic/**/*.html
-baselines/BERTopic/**/*.csv
-
-**/*.jsonl
-**/*.parquet
-**/*.feather
-**/*.pkl
-**/*.pickle
-**/*.joblib
-
-# OS / editor
+###############################################################################
+# OS / Editor
+###############################################################################
 .DS_Store
 .vscode/
+.idea/
+*.swp
+
+###############################################################################
+# Python / Jupyter
+###############################################################################
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+###############################################################################
+# Very large raw datasets and derived "all_*" dumps
+###############################################################################
+data/**/all_data.csv
+data/**/all_results.csv
+
+# If you want to exclude ALL large data under data/, uncomment:
+data/
+
+###############################################################################
+# Embeddings / arrays 
+###############################################################################
+*.npy
+*.npz
+*.embeddings.npy
+
+###############################################################################
+# BERTopic outputs (models + interactive HTML + exports)
+###############################################################################
+baselines/BERTopic/**/bertopic_model
+baselines/BERTopic/**/*.html
+baselines/BERTopic/**/doc_topics.csv
+baselines/BERTopic/**/doc_topics.xlsx
+baselines/BERTopic/**/topics_*.html
+
+###############################################################################
+# Pipeline intermediate outputs 
+###############################################################################
+# clustering artifacts
+pipeline/clustering_code/**/ads_with_clusters.csv
+pipeline/clustering_code/**/posts_with_clusters.csv
+
+# preprocessing artifacts
+pipeline/preprocessing/**/combined_deduped_*.csv
+pipeline/preprocessing/**/combined_deduped_*.embeddings.npy
+
+# LLM assignment artifacts 
+pipeline/llm_assignment/**/*.jsonl
+pipeline/llm_assignment/**/*.csv
+
+###############################################################################
+# Analysis exports 
+###############################################################################
+analysis_and_figures/common_themes_analysis/**
+
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.onnx
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+
+# Explicitly allow these smaller evaluation datasets:
+!evaluation/human_annotation/meta_human_annotation_w_metadata.csv
+!analysis_and_figures/stance_analysis/stance_labels/meta_stance.csv
+!data/meta_data/sample_500.csv
