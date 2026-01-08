@@ -14,7 +14,16 @@ Each section is broken down as follows:
 
 ## Pipeline Code:
 
+### Preprocessing:
+### Clustering Code:
+### Coherency Checking:
+### Summary Generation:
+### Cluster Merging:
+### Theme Generation:
+
 ## Evaluation Code:
+### Human Annotation:
+### LLM Annotation:
 
 ## Analysis Code:
 
@@ -39,6 +48,11 @@ to assess whether the inferred themes meaningfully capture underlying climate-re
   - stance_heatmaps.py: generates the stance heatmaps
   - stance_heatmaps_bluesky: stance heatmap figures for Bluesky baselines + our methods
   - stance_heatmaps_meta: stance heatmap figures for Meta baselines + our methods
+
+### Common Theme Analysis:
+
+##### Folder Contents:
+
 
 
 
