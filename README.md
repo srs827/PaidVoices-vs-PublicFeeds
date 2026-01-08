@@ -54,9 +54,27 @@ Each section is broken down as follows:
   - get_themes.py: codes to obtain the list of themes based on merged summaries for Meta or Bluesky
   - bluesky_themes (meta_themes): contains cluster_themes.csv with the list of clusters, themes, and summaries
 
-## Evaluation Code:
-### Human Annotation:
-### LLM Annotation:
+### Theme Assignment: Assign each post/ad to the proper theme using an LLM (Mistral Large)
+  - Prompts LLM to assign each text to the best fitting theme given a post/ad text and the list of all cluster themes
+  - assign_themes.py: Assigns all Meta ads or Bluesky posts to the best-fitting theme
+  - bluesky_assigned_themes (meta_assigned_themes): contains the list of each unique ad/post and its assigned theme
+
+### Summary (-> Theme) Assignment: Assign each post/ad to the proper summary using an LLM (Mistral Large)
+  - Prompts LLM to assign each text to the best fitting summary given a post/ad text and the list of all cluster summaries
+  - From the assigned summary, we take the theme assignment given for that summary from the **Theme generation** step (summary -> theme mapping)
+  - assign_summaries.py: Assign all Meta ads or Bluesky posts to the best-fitting summary (and implied theme)
+  - bluesky_assigned_themes (meta_assigned_themes): contains the list of each unique ad/post and its assigned theme
+
+## Evaluation Code: Contains both the Human judge results on a sample of 500 ads/posts and the LLM judge results for the same sample of 500 ads/posts
+
+### Human Annotation: Human judge results for Meta/Bluesky
+  - bluesky_human_annotation.csv: contains the list of 500 samples for Bluesky with human annotation of Yes/No for both baselines and our methods (theme, summary->theme)
+  - meta_human_annotation.csv: contains the list of 500 samples for Meta with human annotation of Yes/No for both baselines and our methods (theme, summary->theme)
+    - meta_human_annotation_w_metadata.csv: also contains metadata such as impressions, spend, etc.
+   
+### LLM Annotation: LLM (Qwen3-235b) judge results for Meta/Bluesky and code
+  - annotate.py: annotates each post/ad in the sample for both the baselines and our methods with Yes/No based on wither the topic/theme properly fits the text
+  - bluesky_llm_annotation (meta_llm_annotation): contains the llm annotation results for Bluesky (Meta) with 4 new Yes/No columns (one for each compared method)
 
 ## Analysis Code:
 
@@ -85,6 +103,7 @@ to assess whether the inferred themes meaningfully capture underlying climate-re
 ### Common Theme Analysis:
 
 ##### Folder Contents:
+
 
 
 
