@@ -101,8 +101,18 @@ to assess whether the inferred themes meaningfully capture underlying climate-re
   - stance_heatmaps_meta: stance heatmap figures for Meta baselines + our methods
 
 ### Common Theme Analysis:
+This analysis section compares between similar themes found between Meta/Bluesky. It takes a combined JOINT_THEMES list and maps the Meta and Bluesky data with the combined themes.
+Then, a UMAP representation is generated for the combined themes, as well as a bar chart comparing the number of Meta ads and Bluesky posts for each combined theme.
 
-##### Folder Contents:
+#### Folder Contents:
+  - theme_comparison_outputs: contains generated UMAP representation (umap_fig.png), theme counts per platform
+                              for each combined theme w/ corresponding bar chart, and examples from each combined theme
+  - combined_theme_csvs: resulting csv files from mapping common themes between Meta/Bluesky
+  - map_common_themes.py: maps common themes to produce combined theme csvs for Meta/Bluesky
+      - 1 CSV is generated containing ONLY joint themes, 1 CSV is generated with joint themes replaced, but all other themes the same for both Bluesky and Meta (4 CSVs total)
+  - umap_figures.py: generates the joint theme comparison bar chart and UMAP figure based on the joint themes 
+
+
 
 
 
