@@ -1,4 +1,4 @@
-# Paid Voices versus Public Feeds: : How Climate Narratives Diverge Online
+# Paid Voices versus Public Feeds: How Climate Narratives Diverge Online
 
 This respository contains all code from the theme generation pipeline under "pipeline", which can be modified to work with any target dataset. 
 **Note that full results obtained on the Bluesky and Meta data will be made publically available, with access links to be added in the future.**
@@ -29,6 +29,16 @@ The chosen example for this work includes Charlie Kirk's death and the 2024 Pres
     - additionally includes bar chart with top 10 themes overall by number of ads for Meta  
   - bluesky_event_analysis.py: generates event_charts_bluesky
   - meta_event_anaylsis.py: generates events_charts_meta
+
+### Stance Analysis:
+The stance analysis code uses human-annotated stances to generate heatmaps for both the baseline methods and our method's generated themes
+to assess whether the inferred themes meaningfully capture underlying climate-related stance. 
+
+#### Folder Contents:
+  - stance_labels: contains the human-annotated stance labels for Meta (meta_stance.csv) and Bluesky (bluesky_stance.csv)
+  - stance_heatmaps.py: generates the stance heatmaps
+  - stance_heatmaps_bluesky: stance heatmap figures for Bluesky baselines + our methods
+  - stance_heatmaps_meta: stance heatmap figures for Meta baselines + our methods
 
 
 
