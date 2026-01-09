@@ -1,7 +1,7 @@
 # Paid Voices versus Public Feeds: How Climate Narratives Diverge Online
 
 This respository contains all code from the theme generation pipeline under "pipeline", which can be modified to work with any target dataset. 
-**Note that full results obtained on the Bluesky and Meta data will be made publically available, with access links to be added in the future.**
+We include all results for our Meta and Bluesky climate-related datasets, with raw Meta and Bluesky data available through the following link: https://osf.io/csp3x/overview?view_only=85708d98978b4c7094e47f8604dd5e1a
 
 The repository also contains all analysis-related code under "analysis_and_figures", such as:
   - Comparison of common themes between Meta and Bluesky
@@ -9,6 +9,8 @@ The repository also contains all analysis-related code under "analysis_and_figur
   - Stance analysis code and resulting figures
 
 We provide the evaluation code under "evaluation", where we include the code to provide LLM-judge annotation of the obtained results. 
+
+We provide our full results and final human/llm annotations under "results". 
 
 Each section is broken down as follows:
 
@@ -111,6 +113,19 @@ Then, a UMAP representation is generated for the combined themes, as well as a b
   - map_common_themes.py: maps common themes to produce combined theme csvs for Meta/Bluesky
       - 1 CSV is generated containing ONLY joint themes, 1 CSV is generated with joint themes replaced, but all other themes the same for both Bluesky and Meta (4 CSVs total)
   - umap_figures.py: generates the joint theme comparison bar chart and UMAP figure based on the joint themes 
+
+## Baselines:
+This folder contains the code to obtain LDA and BERTopic baseline topics and keywords. These results for Meta and Bluesky can be found under BERTopic/<bluesky/meta> and lda/<bluesky/meta>. 
+
+## Results:
+The results folder contains the full results for the ~20k posts/ads from Bluesky and Meta, with labeled themes and baseline topics, as well as the results for the sample of 500 posts/ads with both human and LLM annotation. 
+For the sample of 500 texts, column names mean the following:
+  - llm_theme_summ: Theme derived from LLM Summary (-> Theme) assignment portion of the pipeline code
+  - llm_theme_theme: Theme derived from LLM theme assignment portion of the pipeline code
+  - llm_theme_llm_truth: LLM judge annotation of whether llm_theme_theme properly fits the text
+  - llm_summ_llm_truth: LLM judge annotation of whether llm_theme_summ properly fits the text 
+  - llm_theme_human_truth: Human judge annotation of whether llm_theme_theme properly fits the text
+  - llm_summ_human_truth: Human judge annotation of whether llm_theme_summ properly fits the text 
 
 
 
