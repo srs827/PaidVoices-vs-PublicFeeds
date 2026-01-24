@@ -1,6 +1,9 @@
 # Paid Voices versus Public Feeds: How Climate Narratives Diverge Online
 
-This respository contains all code from the theme generation pipeline under "pipeline", which can be modified to work with any target dataset. 
+This repository contains code and data for the paper titled "[Paid Voices vs. Public Feeds: Interpretable Cross-Platform Theme
+Modeling of Climate Discourse](https://arxiv.org/pdf/2601.13317)".
+
+All code from the theme generation pipeline under "pipeline", which can be modified to work with any target dataset. 
 We include all results for our Meta and Bluesky climate-related datasets, with raw Meta and Bluesky data available through the following link: https://osf.io/csp3x/overview?view_only=85708d98978b4c7094e47f8604dd5e1a
 
 The repository also contains all analysis-related code under "analysis_and_figures", such as:
@@ -128,9 +131,19 @@ For the sample of 500 texts, column names mean the following:
   - llm_summ_human_truth: Human judge annotation of whether llm_theme_summ properly fits the text 
 
 
+## Citation:
 
+If you find the code, data, and paper useful in your work, please cite:
 
+```
+@article{sudhoff2026paid,
+  title={Paid Voices vs. Public Feeds: Interpretable Cross-Platform Theme Modeling of Climate Discourse},
+  author={Sudhoff, Samantha and Perumal, Pranav and Wu, Zhaoqing and Islam, Tunazzina},
+  journal={arXiv preprint arXiv:2601.13317},
+  year={2026}
+}
 
+```
 
 
 
