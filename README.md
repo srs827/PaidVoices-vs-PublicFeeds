@@ -3,7 +3,7 @@
 This repository contains code and data for the paper titled "[Paid Voices vs. Public Feeds: Interpretable Cross-Platform Theme
 Modeling of Climate Discourse](https://arxiv.org/pdf/2601.13317)".
 
-All code from the theme generation pipeline under "pipeline", which can be modified to work with any target dataset. 
+All code from the theme generation pipeline is under "pipeline", which can be modified to work with any target dataset. 
 We include all results for our Meta and Bluesky climate-related datasets, with raw Meta and Bluesky data available through the following link: https://osf.io/csp3x/overview?view_only=85708d98978b4c7094e47f8604dd5e1a
 
 The repository also contains all analysis-related code under "analysis_and_figures", such as:
@@ -144,6 +144,7 @@ If you find the code, data, and paper useful in your work, please cite:
 }
 
 ```
+
 
 
 
