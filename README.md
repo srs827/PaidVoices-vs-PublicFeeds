@@ -63,6 +63,7 @@ Each section is broken down as follows:
   - Prompts LLM to assign each text to the best fitting theme given a post/ad text and the list of all cluster themes
   - assign_themes.py: Assigns all Meta ads or Bluesky posts to the best-fitting theme
   - bluesky_assigned_themes (meta_assigned_themes): contains the list of each unique ad/post and its assigned theme
+  - Redundancy analysis of generated themes.
 
 ### Summary (-> Theme) Assignment: Assign each post/ad to the proper summary using an LLM (Mistral Large)
   - Prompts LLM to assign each text to the best fitting summary given a post/ad text and the list of all cluster summaries
@@ -85,7 +86,7 @@ Each section is broken down as follows:
 
 ### Event Analysis:
 The purpose of the event analysis section is to obtain information on number of posts/ads within a before/after window based upon significant political events.
-The chosen example for this work includes Charlie Kirk's death and the 2024 Presidential Election.
+The chosen example for this work includes The 2025 Southern California Wildfires and the 2024 Presidential Election.
 
 #### Folder Contents:
   - events_charts_bluesky: contains all event windows (2, 3, 7, 30 day windows before/after) for number of posts only [Bluesky Dataset]
@@ -118,7 +119,7 @@ Then, a UMAP representation is generated for the combined themes, as well as a b
   - umap_figures.py: generates the joint theme comparison bar chart and UMAP figure based on the joint themes 
 
 ## Baselines:
-This folder contains the code to obtain LDA and BERTopic baseline topics and keywords. These results for Meta and Bluesky can be found under BERTopic/<bluesky/meta> and lda/<bluesky/meta>. 
+This folder contains the code and/or data to obtain LDA, BERTopic, and TopicGPT baseline topics and keywords. These results for Meta and Bluesky can be found under BERTopic/<bluesky/meta> and lda/<bluesky/meta> and within the two csv folders in the TopicGPT subfolder.
 
 ## Results:
 The results folder contains the full results for the ~20k posts/ads from Bluesky and Meta, with labeled themes and baseline topics, as well as the results for the sample of 500 posts/ads with both human and LLM annotation. 
