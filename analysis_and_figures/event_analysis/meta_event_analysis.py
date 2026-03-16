@@ -10,9 +10,9 @@ sns.set(style="whitegrid")
 sns.set_context("talk")
 
 # update with proper path
-DATA_PATH = "data/meta_data/all_results.csv"
+DATA_PATH = "data/final_results_nov12_with_topics_and_meta.csv"
 ELECTION_DAY = pd.Timestamp("2024-11-05")
-CHARLIE_KIRK_DAY = pd.Timestamp("2025-09-10")
+WILDFIRE_DAY = pd.Timestamp("2025-01-07")
 
 CHARTS_DIR = "event_charts_meta"
 os.makedirs(CHARTS_DIR, exist_ok=True)
@@ -410,9 +410,102 @@ def plot_top5_themes_by_metric_window(
     print(f"Saved top-5 themes by {metric} plot to: {out_path}")
 
 
-# main analysis
+# ── Emerging / Disappearing themes ──────────────────────────────────────────
 
-def analyze_event(df_days, event_date, event_name):
+def theme_counts_in_window(
+    df_days: pd.DataFrame,
+    start: pd.Timestamp,
+    end: pd.Timestamp,
+) -> pd.Series:
+    """
+    Returns a Series: theme -> number of unique ads in [start, end].
+    Deduplicates by AD_ID_COL when available; otherwise counts rows.
+    """
+    sub = df_days[df_days["date"].between(start, end)]
+    if sub.empty:
+        return pd.Series(dtype=int)
+
+    if AD_ID_COL is not None:
+        sub = sub.drop_duplicates(subset=[AD_ID_COL])
+        return sub.groupby("theme")[AD_ID_COL].nunique().sort_values(ascending=False)
+    else:
+        return sub.groupby("theme").size().sort_values(ascending=False)
+
+
+def get_emerging_disappearing_themes(
+    df_days: pd.DataFrame,
+    event_date: pd.Timestamp,
+    window_days: int,
+    min_ads: int = 1,
+    top_k: int = 25,
+):
+    """
+    Emerging:     Before == 0 AND After >= min_ads
+    Disappearing: Before >= min_ads AND After == 0
+
+    Returns:
+        emerging_df, disappearing_df
+    Each DataFrame has columns: theme, before_ads, after_ads, delta
+    """
+    before_start = event_date - pd.Timedelta(days=window_days)
+    before_end   = event_date - pd.Timedelta(days=1)
+    after_start  = event_date
+    after_end    = event_date + pd.Timedelta(days=window_days)
+
+    before_counts = theme_counts_in_window(df_days, before_start, before_end)
+    after_counts  = theme_counts_in_window(df_days, after_start, after_end)
+
+    all_themes = before_counts.index.union(after_counts.index)
+    before_counts = before_counts.reindex(all_themes, fill_value=0).astype(int)
+    after_counts  = after_counts.reindex(all_themes, fill_value=0).astype(int)
+
+    emerging_mask     = (before_counts == 0) & (after_counts >= min_ads)
+    disappearing_mask = (before_counts >= min_ads) & (after_counts == 0)
+
+    emerging = pd.DataFrame({
+        "theme":       all_themes,
+        "before_ads":  before_counts.values,
+        "after_ads":   after_counts.values,
+    })
+    emerging = emerging[emerging_mask.values].copy()
+    emerging["delta"] = emerging["after_ads"] - emerging["before_ads"]
+    emerging = emerging.sort_values(
+        ["after_ads", "theme"], ascending=[False, True]
+    ).head(top_k)
+
+    disappearing = pd.DataFrame({
+        "theme":       all_themes,
+        "before_ads":  before_counts.values,
+        "after_ads":   after_counts.values,
+    })
+    disappearing = disappearing[disappearing_mask.values].copy()
+    disappearing["delta"] = disappearing["after_ads"] - disappearing["before_ads"]
+    disappearing = disappearing.sort_values(
+        ["before_ads", "theme"], ascending=[False, True]
+    ).head(top_k)
+
+    return emerging, disappearing
+
+
+def print_theme_change_list(title: str, df_list: pd.DataFrame, max_chars: int = 70):
+    """Print emerging/disappearing themes with before/after ad counts."""
+    print(title)
+    if df_list.empty:
+        print("  (none)")
+        return
+    for _, row in df_list.iterrows():
+        t = str(row["theme"])
+        if len(t) > max_chars:
+            t = t[: max_chars - 3] + "..."
+        print(
+            f"  - {t} | before={int(row['before_ads'])}, "
+            f"after={int(row['after_ads'])}, Δ={int(row['delta'])}"
+        )
+
+
+# ── Main analysis ────────────────────────────────────────────────────────────
+
+def analyze_event(df_days, event_date, event_name, MIN_ADS: int = 1):
     print(f"\n===== Analysis: {event_name} on {event_date.date()} =====\n")
 
     # windows (2d, 3d, 1wk, 1mo)
@@ -421,7 +514,7 @@ def analyze_event(df_days, event_date, event_name):
     for w in windows:
         print(f"\n=== {w}-DAY WINDOW ===")
         summary = compute_before_after_metrics(df_days, event_date, w)
-        print(summary)  # raw numbers for sanity
+        print(summary)  
         plot_metrics(summary, w, event_name)
 
         # Choose themes once based on ads-only before/after diff
@@ -451,9 +544,25 @@ def analyze_event(df_days, event_date, event_name):
             top_themes=top_themes,
         )
 
+        # Emerging / Disappearing themes
+        emerging, disappearing = get_emerging_disappearing_themes(
+            df_days=df_days,
+            event_date=event_date,
+            window_days=w,
+            min_ads=MIN_ADS,
+            top_k=5,
+        )
+
+        print_theme_change_list(
+            f"Emerging themes (Before=0, After≥{MIN_ADS}) [{w}d]:", emerging
+        )
+        print_theme_change_list(
+            f"Disappearing themes (Before≥{MIN_ADS}, After=0) [{w}d]:", disappearing
+        )
+
 
 analyze_event(df_days, ELECTION_DAY, "US Election 2024 (Meta)")
-analyze_event(df_days, CHARLIE_KIRK_DAY, "Charlie Kirk Death (Meta)")
+analyze_event(df_days, WILDFIRE_DAY, "January 2025 California Wildfires (Meta)")
 
 # top 10 themes overall
 
