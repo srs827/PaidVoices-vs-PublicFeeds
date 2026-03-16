@@ -10,9 +10,9 @@ sns.set(style="whitegrid")
 sns.set_context("talk")
 
 # replace with path to final results for bluesky
-DATA_PATH = "data/bluesky_data/all_results.csv"
+DATA_PATH = "data/all-results.csv"
 ELECTION_DAY = pd.Timestamp("2024-11-05")
-CHARLIE_KIRK_DAY = pd.Timestamp("2025-09-10")
+WILDFIRE_DAY = pd.Timestamp("2025-01-07")
 
 CHARTS_DIR = "events_charts_bluesky"
 os.makedirs(CHARTS_DIR, exist_ok=True)
@@ -310,7 +310,7 @@ def analyze_event(df_posts: pd.DataFrame, event_date: pd.Timestamp, event_name: 
         print_theme_change_list(f"Disappearing themes (Before≥{MIN_POSTS}, After=0) [{w}d]:", disappearing)
 
 analyze_event(df, ELECTION_DAY, "US Election 2024 (Bluesky)")
-analyze_event(df, CHARLIE_KIRK_DAY, "Charlie Kirk Death (Bluesky)")
+analyze_event(df, WILDFIRE_DAY, "January 2025 California Wildfires (Bluesky)")
 
 # Top 10 Themes Overall
 plt.figure(figsize=(12, 6))
