@@ -1,4 +1,4 @@
-# Paid Voices versus Public Feeds: How Climate Narratives Diverge Online
+# Paid Voices versus Public Feeds:  Interpretable Cross-Platform Theme-Based Analysis of Climate Discourse
 
 This repository contains code and data for the paper titled "[Paid Voices vs. Public Feeds: Interpretable Cross-Platform Theme
 Modeling of Climate Discourse](https://arxiv.org/pdf/2601.13317)".
