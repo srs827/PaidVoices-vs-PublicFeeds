@@ -132,18 +132,6 @@ For the sample of 500 texts, column names mean the following:
   - llm_summ_human_truth: Human judge annotation of whether llm_theme_summ properly fits the text 
 
 
-## Citation:
-
-If you find the code, data, and paper useful in your work, please cite:
-
-```
-@article{sudhoff2026paid,
-  title={Paid Voices vs. Public Feeds: Interpretable Cross-Platform Theme Modeling of Climate Discourse},
-  author={Sudhoff, Samantha and Perumal, Pranav and Wu, Zhaoqing and Islam, Tunazzina},
-  journal={arXiv preprint arXiv:2601.13317},
-  year={2026}
-}
-
 ```
 
 
